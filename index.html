@@ -12,15 +12,132 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="css" href="css/normalize.css">
-        <link rel="css" href="css/main.css">
+		<link rel="stylesheet" href="css/main.css">
 		<!--[if lt IE 9]>
         <script src="js/vendor/html5shiv.js"></script>
 		<![endif]-->
+		 <!--<link rel="css" href="css/normalize.css">-->
+        
     </head>
     <body>
+
+		<section class="wrapper clearfix">
+			<header class="clearfix">
+				<h1>Logo &amp; Headline</h1>
+				<ul class="session">
+					<li>You are signed in as <a href="#" title="Account Information">Name</a></li>
+					<li> | <a href="#" title="Layout">Logout</a></li>
+				</ul>
+			</header>
+				<div class="main" role="main">
+					<ul class="nav nav-tabs" id="myTab">
+					  <li class="active"><a data-toggle="tab" href="#tab1">Tab1</a></li>
+					  <li class=""><a data-toggle="tab" href="#tab2">Tab2</a></li>
+					  <li class=""><a data-toggle="tab" href="#tab3">Tab3</a></li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+					  <div id="tab1" class="tab-pane column active">
+						<article id="profile-131">
+							<figure class="avatar">
+								<img src="http://placehold.it/73x73&text=User%20Picture" alt="User Picture"/>
+							</figure>
+							<div class="profile" data-profile-id="131">
+								<dl class="profile-header">
+									<dt><strong>First Last</strong>
+									<dd>| Member since: 19-03-2011</dd>
+									<dd>| Jobs completed: 42</dd>
+									<dd>| Rating: *****</dd>
+								</dl>
+								<dl class="profile-skills">
+									<dt>Skills:</dt>
+									<dd>PHP <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+									<dd>CSS <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+									<dd>HTML <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+									<dd>LESS <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+								</dl>
+								<button class="addSkills" data-profile-id="131">Add Skills</button>
+								<button class="deleteProfile" data-profile-id="131">Delete</button>
+							</div>
+						</article>
+						<article class="active" id="profile-132">
+							<figure class="avatar">
+								<img src="http://placehold.it/73x73&text=User%20Picture" alt="User Picture"/>
+							</figure>
+							<div class="profile"data-profile-id="132">
+								<dl class="profile-header">
+									<dt><strong>First Last</strong>
+									<dd>| Member since: 19-03-2011</dd>
+									<dd>| Jobs completed: 42</dd>
+									<dd>| Rating: *****</dd>
+								</dl>
+								<dl class="profile-skills">
+									<dt>Skills:</dt>
+									<dd>PHP <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+									<dd>CSS <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+									<dd>HTML <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+								</dl>
+								<button class="addSkills" data-profile-id="132">Add Skills</button>
+								<button class="deleteProfile" data-profile-id="132">Delete</button>
+							</div>
+						</article>		
+					<article id="profile-134">
+							<figure class="avatar">
+								<img src="http://placehold.it/73x73&text=User%20Picture" alt="User Picture"/>
+							</figure>
+							<div class="profile">
+								<dl class="profile-header">
+									<dt><strong>First Last</strong>
+									<dd>| Member since: 19-03-2011</dd>
+									<dd>| Jobs completed: 42</dd>
+									<dd>| Rating: *****</dd>
+								</dl>
+								<dl class="profile-skills">
+									<dt>Skills:</dt>
+									<dd>.NET <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+									<dd>JavaScript <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+									<dd>HTML <span><a href="#" class="deleteSkill">&times;</a></span></dd>
+								</dl>
+								<button class="addSkills" data-profile-id="134">Add Skills</button>
+								<button class="deleteProfile" data-profile-id="134">Delete</button>
+							</div>
+						</article>
+					  </div><!--END #tab1-->
+					  <aside class="side1 column">
+					<figure>
+						<img src="http://placehold.it/230x230&text=Account%20Information" alt="Accout Information" />
+					</figure>
+					<table>
+						<caption>Account Information</caption>
+						<tbody>
+							<tr><th>Name:</th><td>Joe Blogs</td></tr>
+							<tr><th>Account Tpye:</th><td>Premium</td></tr>
+							<tr><th>Date Joined</th><td>12-05-2012</td></tr>
+							<tr><th>Likes:</th><td>342</td></tr>
+							<tr><th>Shares:</th><td>19</td></tr>
+							<tr><th>Points:</th><td>2498</td></tr>
+							<tr><th>Website:</th><td><a href="#" title="Website">myweb.com</a></td></tr>
+						</tbody>
+					</table>
+				</aside>
+					</div>
+				</div>
+				<footer>
+					<ul>
+						<li>This is the page footer</li>
+						<li>| <a href="#">Terms & Conditions</a>
+						<li>| <a href="#">Contact Us</a>
+					</ul>
+				</footer>
+		</section>
+		
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+		<div id="addSkillsModel" class="popup">
+			<fieldset>
+				<input type="text" id="skills" placeholder="comma-seperated list of skills" />
+				<button id="saveSkills">Save</button>
+				<button id="closeModel">Close</button>
+			</fieldset>
+		</div>
     </body>
 </html>

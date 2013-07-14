@@ -1,9 +1,14 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
 
-@import "normalize.scss";
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
 
 html,
 button,
@@ -293,4 +298,3 @@ textarea {
         page-break-after: avoid;
     }
 }
-
