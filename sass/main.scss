@@ -183,6 +183,9 @@ header {
 	article {
 		@include clearfix();
 		margin-bottom: 3em;
+		position: relative;
+		top:0;
+		left: 0;
 		padding: 1.5em;
 		@include  border-radius(5px);
 		border: 1px solid #242424;
@@ -206,6 +209,7 @@ header {
 }
 
 .profile {
+	position: relative;
 	overflow: hidden;	
 	font-size: 1.3em;
 	dl {
@@ -239,6 +243,7 @@ header {
 	button {
 		width: 100px;
 		padding: 0.2em 0;
+		position: relative;
 	}
 }
 
@@ -280,16 +285,43 @@ footer{
 }
 
 #addSkillsModel {
+	display: none;
 	font-size:1.3em;
 	width: 30em;
 	padding: 1.5em;
 	position: absolute;
 	border: 1px solid #242424;
+	background: #fff;
 	@include  border-radius(5px);
 	input[type="text"] {
 		display: block;
 		width: 30em;
 		margin-bottom: 1em;
+	}
+	&:after, &:before {
+		bottom: 100%;
+		border: solid transparent; 
+		content: " "; 
+		height: 0; 
+		width: 0; 
+		position: absolute; 
+		pointer-events: none;
+	}
+	
+	&:after{
+		border-color: rgba(255, 255, 255, 0); 
+		border-bottom-color: #ffffff; 
+		border-width: 15px; 
+		left: 10%; 
+		margin-left: -15px;
+	}
+	
+	&:before {
+		border-color: rgba(36, 36, 36, 0); 
+		border-bottom-color: #242424; 
+		border-width: 16px; 
+		left: 10%; 
+		margin-left: -16px;
 	}
 	
 	button {

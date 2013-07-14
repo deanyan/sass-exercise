@@ -670,6 +670,9 @@ header .session li.last {
 .tab-content article {
   overflow: hidden;
   margin-bottom: 3em;
+  position: relative;
+  top: 0;
+  left: 0;
   padding: 1.5em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -678,12 +681,12 @@ header .session li.last {
   border-radius: 5px;
   border: 1px solid #242424;
 }
-/* line 189, ../sass/main.scss */
+/* line 192, ../sass/main.scss */
 .tab-content article:hover, .tab-content article.active {
   background: #94CBE9;
 }
 
-/* line 196, ../sass/main.scss */
+/* line 199, ../sass/main.scss */
 .tab-pane {
   width: 64.9em;
   min-height: 53.8em;
@@ -691,18 +694,19 @@ header .session li.last {
   border-right: 1px solid #242424;
 }
 
-/* line 203, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 .avatar {
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 208, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
 .profile {
+  position: relative;
   overflow: hidden;
   font-size: 1.3em;
 }
-/* line 211, ../sass/main.scss */
+/* line 215, ../sass/main.scss */
 .profile dl {
   margin: 0;
   padding: 0;
@@ -711,7 +715,7 @@ header .session li.last {
   margin-bottom: 1em;
   margin-top: 0.5em;
 }
-/* line 215, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 .profile dl dt, .profile dl dd {
   list-style-image: none;
   list-style-type: none;
@@ -734,40 +738,41 @@ header .session li.last {
 .profile dl dt.last, .profile dl dd.last {
   padding-right: 0;
 }
-/* line 219, ../sass/main.scss */
+/* line 223, ../sass/main.scss */
 .profile dl:first-child {
   padding-bottom: 0.7em;
   margin-bottom: 0;
   border-bottom: 1px solid #ccc;
   margin-top: 0;
 }
-/* line 229, ../sass/main.scss */
+/* line 233, ../sass/main.scss */
 .profile .profile-skills dd {
   margin-left: 2em;
   color: #0000ff;
 }
-/* line 235, ../sass/main.scss */
+/* line 239, ../sass/main.scss */
 .profile a {
   text-decoration: none;
   color: #242424;
 }
-/* line 239, ../sass/main.scss */
+/* line 243, ../sass/main.scss */
 .profile button {
   width: 100px;
   padding: 0.2em 0;
+  position: relative;
 }
 
-/* line 245, ../sass/main.scss */
+/* line 250, ../sass/main.scss */
 .side1 {
   width: 23em;
   padding: 2em;
 }
-/* line 248, ../sass/main.scss */
+/* line 253, ../sass/main.scss */
 .side1 table {
   font-size: 1.2em;
   margin-top: 1.5em;
 }
-/* line 253, ../sass/main.scss */
+/* line 258, ../sass/main.scss */
 .side1 caption {
   text-align: left;
   border-bottom: 1px solid #242424;
@@ -776,20 +781,20 @@ header .session li.last {
   padding-bottom: 0.3em;
   margin-bottom: 1em;
 }
-/* line 262, ../sass/main.scss */
+/* line 267, ../sass/main.scss */
 .side1 th {
   font-weight: normal;
   text-align: left;
   width: 12.6em;
 }
 
-/* line 269, ../sass/main.scss */
+/* line 274, ../sass/main.scss */
 footer {
   margin-top: 2em;
   text-align: center;
   font-size: 1.2em;
 }
-/* line 273, ../sass/main.scss */
+/* line 278, ../sass/main.scss */
 footer ul {
   margin: 0;
   padding: 0;
@@ -797,7 +802,7 @@ footer ul {
   overflow: hidden;
   display: inline-block;
 }
-/* line 276, ../sass/main.scss */
+/* line 281, ../sass/main.scss */
 footer ul li {
   list-style-image: none;
   list-style-type: none;
@@ -821,26 +826,54 @@ footer ul li.last {
   padding-right: 0;
 }
 
-/* line 282, ../sass/main.scss */
+/* line 287, ../sass/main.scss */
 #addSkillsModel {
+  display: none;
   font-size: 1.3em;
   width: 30em;
   padding: 1.5em;
   position: absolute;
   border: 1px solid #242424;
+  background: #fff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 289, ../sass/main.scss */
+/* line 296, ../sass/main.scss */
 #addSkillsModel input[type="text"] {
   display: block;
   width: 30em;
   margin-bottom: 1em;
 }
-/* line 295, ../sass/main.scss */
+/* line 301, ../sass/main.scss */
+#addSkillsModel:after, #addSkillsModel:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 311, ../sass/main.scss */
+#addSkillsModel:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 15px;
+  left: 10%;
+  margin-left: -15px;
+}
+/* line 319, ../sass/main.scss */
+#addSkillsModel:before {
+  border-color: rgba(36, 36, 36, 0);
+  border-bottom-color: #242424;
+  border-width: 16px;
+  left: 10%;
+  margin-left: -16px;
+}
+/* line 327, ../sass/main.scss */
 #addSkillsModel button {
   width: 100px;
   padding: 0.2em 0;
@@ -852,7 +885,7 @@ footer ul li.last {
 /*
  * Image replacement
  */
-/* line 315, ../sass/main.scss */
+/* line 347, ../sass/main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -861,7 +894,7 @@ footer ul li.last {
   *text-indent: -9999px;
 }
 
-/* line 323, ../sass/main.scss */
+/* line 355, ../sass/main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -872,7 +905,7 @@ footer ul li.last {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 334, ../sass/main.scss */
+/* line 366, ../sass/main.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -881,7 +914,7 @@ footer ul li.last {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 343, ../sass/main.scss */
+/* line 375, ../sass/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -897,7 +930,7 @@ footer ul li.last {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 360, ../sass/main.scss */
+/* line 392, ../sass/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -911,7 +944,7 @@ footer ul li.last {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 373, ../sass/main.scss */
+/* line 405, ../sass/main.scss */
 .invisible {
   visibility: hidden;
 }
@@ -927,7 +960,7 @@ footer ul li.last {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 390, ../sass/main.scss */
+/* line 422, ../sass/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -936,7 +969,7 @@ footer ul li.last {
   /* 2 */
 }
 
-/* line 395, ../sass/main.scss */
+/* line 427, ../sass/main.scss */
 .clearfix:after {
   clear: both;
 }
@@ -945,12 +978,12 @@ footer ul li.last {
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-/* line 404, ../sass/main.scss */
+/* line 436, ../sass/main.scss */
 .clearfix {
   *zoom: 1;
 }
 
-/* line 408, ../sass/main.scss */
+/* line 440, ../sass/main.scss */
 .column {
   float: left;
   overflow: hidden;
@@ -972,7 +1005,7 @@ footer ul li.last {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 435, ../sass/main.scss */
+  /* line 467, ../sass/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -981,18 +1014,18 @@ footer ul li.last {
     text-shadow: none !important;
   }
 
-  /* line 443, ../sass/main.scss */
+  /* line 475, ../sass/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 447, ../sass/main.scss */
+  /* line 479, ../sass/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 451, ../sass/main.scss */
+  /* line 483, ../sass/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -1000,33 +1033,33 @@ footer ul li.last {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 461, ../sass/main.scss */
+  /* line 493, ../sass/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 466, ../sass/main.scss */
+  /* line 498, ../sass/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 471, ../sass/main.scss */
+  /* line 503, ../sass/main.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 476, ../sass/main.scss */
+  /* line 508, ../sass/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 480, ../sass/main.scss */
+  /* line 512, ../sass/main.scss */
   img {
     max-width: 100% !important;
   }
@@ -1035,7 +1068,7 @@ footer ul li.last {
     margin: 0.5cm;
 }
 
-  /* line 490, ../sass/main.scss */
+  /* line 522, ../sass/main.scss */
   p,
   h2,
   h3 {
@@ -1043,7 +1076,7 @@ footer ul li.last {
     widows: 3;
   }
 
-  /* line 496, ../sass/main.scss */
+  /* line 528, ../sass/main.scss */
   h2,
   h3 {
     page-break-after: avoid;

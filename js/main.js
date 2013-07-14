@@ -26,7 +26,8 @@ var Profile = function() {
 
 Profile.prototype = {
 	init: function() {
-		this.removeProfile().deleteSkill().addSkills().closeModel();
+		this.removeProfile().deleteSkill();
+		this.addSkills().closeModel();
 		
 	},
 
@@ -41,8 +42,13 @@ Profile.prototype = {
 				
 					var profileId = 'profile-' + delButton.getAttribute('data-profile-id');
 					var profile = document.getElementById(profileId);
+					var model = document.getElementById('addSkillsModel');
 					
 					profile.parentNode.removeChild(profile);
+					
+					if(model.style.display === 'block'){
+						model.style.display = 'none';
+					}
 				}
 			})(buttons[i]);		
 		}
@@ -53,80 +59,64 @@ Profile.prototype = {
 	
 	addSkills: function() {
 		
-		var saveButton = document.getElementById('saveSkills');
+		var profileId;
 		
-		console.log(saveButton);
-		
-		saveButton.onclick = function() {
-		
-			
-			var skills = document.getElementById('skills').value;
-			
-			var profileId;
-		
-			skills = skills.split(',');
-			
-			for(var i = 0, len = skills.length; i < len; i++) {
-				var d = document.createElement('div');
-				d.innerHTML = '<dd>' + skills[i] + ' <span><a href="#" class="deleteSkill">&times;</a></span></dd>';
-				
-				
-				
-				var target = profero.util.getElementsByClass(profileId, 'dl', 'profile-skills');
-
-				target[0].appendChild(d);
-			
-			}
-					
-		};
-	
-	
 		var buttons = profero.util.getElementsByClass('myTabContent', 'button', 'addSkills');
 		
+			
 		for(var i = 0, len = buttons.length; i < len; i++) {
 			
 			(function(addButton){
 			
 				addButton.onclick = function() {
-				
+
+					var ele = this;
+					var top = 0;
+					var left = 0;
 					
-				
-				document.getElementById('addSkillsModel').display = 'block';
-				
-				
-				
-				
-				
-					/*var d = document.createElement('div');
-					d.innerHTML = '<dd>xxx <span><a href="#" class="deleteSkill">&times;</a></span></dd>';
-			
-					
-					/*
-					var dd = document.createElement("dd"),					
-						span = document.createElement("span"),
-						anchor = document.createElement("a");
-						
-					dd.innerHTML = 'XXX';
-					
-					anchor.setAttribute('href', '#');
-					anchor.className = 'deleteSkill';
-					
-					anchor.innerHTML = ' &times;';
-					
-					span.appendChild(anchor);	
-					dd.appendChild(span);
-					
-					
+					var model;
+								
 					profileId = 'profile-' + addButton.getAttribute('data-profile-id');
 					
-					var target = profero.util.getElementsByClass(profileId, 'dl', 'profile-skills');
-	
-					target[0].appendChild(d);
-					*/
+					model = document.getElementById('addSkillsModel');
+				   
+					while(ele.offsetParent) {
+						top += ele.offsetTop;
+						left += ele.offsetLeft;
+						ele = ele.offsetParent;
+					}
+					
+					model.style.display = 'block'
+					model.style.top = top + 45 + 'px';
+					model.style.left = left + 15 + 'px';
+					
+		
 				}
 			})(buttons[i]);		
 		}
 		
+		
+		document.getElementById('saveSkills').onclick = function() {
+		
+			var skills = document.getElementById('skills').value;
+			
+			if(skills) {
+
+				skills = skills.split(',');
+				
+				for(var i = 0, len = skills.length; i < len; i++) {
+					var d = document.createElement('div');
+					d.innerHTML = '<dd>' + skills[i] + ' <span><a href="#" class="deleteSkill">&times;</a></span></dd>';
+				
+					var target = profero.util.getElementsByClass(profileId, 'dl', 'profile-skills');
+
+					target[0].appendChild(d);
+				
+				}
+			}
+					
+		};
+	
 		return this;
 	},
 	
@@ -136,8 +126,9 @@ Profile.prototype = {
 			(function(anchor){
 			
 				anchor.onclick = function() {
+
 					var target = anchor.parentNode.parentNode;
-					
+		
 					target.parentNode.removeChild(target);
 					
 					return false;
@@ -150,7 +141,7 @@ Profile.prototype = {
 	
 	closeModel: function() {
 		document.getElementById('closeModel').onclick = function() {
-			document.getElementById('addSkillsModel').display = 'none';
+			document.getElementById('addSkillsModel').style.display = 'none';
 		}
 	}
 };
