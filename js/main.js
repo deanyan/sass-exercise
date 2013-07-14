@@ -26,8 +26,10 @@ var Profile = function() {
 
 Profile.prototype = {
 	init: function() {
-		this.removeProfile().deleteSkill();
-		this.addSkills().closeModel();
+		this.removeProfile()
+			.deleteSkill()
+			.addSkills()
+			.closeModel();
 		
 	},
 
