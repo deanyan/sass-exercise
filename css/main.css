@@ -997,6 +997,73 @@ footer ul li.last {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
+@media only screen and (max-width: 60em) {
+  /* line 455, ../sass/main.scss */
+  .column {
+    float: none;
+  }
+
+  /* line 459, ../sass/main.scss */
+  .wrapper {
+    width: 85%;
+  }
+
+  /* line 464, ../sass/main.scss */
+  .tab-pane {
+    width: auto;
+  }
+
+  /* line 468, ../sass/main.scss */
+  .side1 {
+    width: auto;
+    text-align: center;
+  }
+  /* line 472, ../sass/main.scss */
+  .side1 img {
+    width: 80%;
+  }
+  /* line 476, ../sass/main.scss */
+  .side1 table {
+    width: 80%;
+    margin: 2em auto 0;
+  }
+
+  /* line 482, ../sass/main.scss */
+  #addSkillsModel {
+    width: 50%;
+  }
+  /* line 485, ../sass/main.scss */
+  #addSkillsModel #skills {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  /* line 492, ../sass/main.scss */
+  header {
+    text-align: center;
+  }
+  /* line 494, ../sass/main.scss */
+  header h1 {
+    float: none;
+    display: inline-block;
+  }
+  /* line 499, ../sass/main.scss */
+  header .session {
+    float: none;
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 32em) {
+  /* line 510, ../sass/main.scss */
+  header h1 {
+    font-size: 3.2em;
+  }
+
+  /* line 515, ../sass/main.scss */
+  #addSkillsModel {
+    width: 30%;
+  }
+}
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
@@ -1005,7 +1072,7 @@ footer ul li.last {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 467, ../sass/main.scss */
+  /* line 533, ../sass/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1014,18 +1081,18 @@ footer ul li.last {
     text-shadow: none !important;
   }
 
-  /* line 475, ../sass/main.scss */
+  /* line 541, ../sass/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 479, ../sass/main.scss */
+  /* line 545, ../sass/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 483, ../sass/main.scss */
+  /* line 549, ../sass/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -1033,33 +1100,33 @@ footer ul li.last {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 493, ../sass/main.scss */
+  /* line 559, ../sass/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 498, ../sass/main.scss */
+  /* line 564, ../sass/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 503, ../sass/main.scss */
+  /* line 569, ../sass/main.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 508, ../sass/main.scss */
+  /* line 574, ../sass/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 512, ../sass/main.scss */
+  /* line 578, ../sass/main.scss */
   img {
     max-width: 100% !important;
   }
@@ -1068,7 +1135,7 @@ footer ul li.last {
     margin: 0.5cm;
 }
 
-  /* line 522, ../sass/main.scss */
+  /* line 588, ../sass/main.scss */
   p,
   h2,
   h3 {
@@ -1076,7 +1143,7 @@ footer ul li.last {
     widows: 3;
   }
 
-  /* line 528, ../sass/main.scss */
+  /* line 594, ../sass/main.scss */
   h2,
   h3 {
     page-break-after: avoid;

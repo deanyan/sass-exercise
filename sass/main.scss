@@ -451,6 +451,72 @@ footer{
     /* Style adjustments for viewports that meet the condition */
 }
 
+@media only screen and (max-width: 60em) {
+   .column {
+	float: none;
+   }
+   
+   .wrapper {
+	width: 85%;
+   }
+   
+    
+   .tab-pane {
+	width: auto;
+   }
+   
+   .side1 {
+	width: auto;
+	text-align: center;
+	
+	img {
+		width: 80%;
+	}
+	
+	table {
+		width: 80%;
+		margin: 2em auto 0;
+	}
+   }
+   
+   #addSkillsModel {
+		width: 50%;
+		
+		#skills{
+			width: 95%;
+		}
+   }
+}
+
+@media only screen and (max-width: 48em) {
+	header {
+		text-align: center;
+		h1 {
+			float: none;
+			display: inline-block;
+		}
+		
+		.session{
+			float: none;
+			display: inline-block;
+		}
+		
+	   }
+}
+
+@media only screen and (max-width: 32em) {
+
+	header {
+		h1 {
+			font-size: 3.2em;
+		}
+	}
+	 
+	 #addSkillsModel {
+		width: 30%;
+   }
+}
+
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
