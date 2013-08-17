@@ -4,13 +4,13 @@ A single web page to exercise building page with SASS CSS processor and DOM mani
 
 ## Main JavaScript functions
 
-All helper functions are defined in namespace as follows:
-```html
+#### All helper functions are defined in namespace as follows:
+```javascript
 var profero = profero || {};
 ```
 
-A utility helper function to grap all elements with the same class name under a certain root(parent) element or otherwise document element
-```html
+#### A utility helper function to grap all elements with the same class name under a certain root(parent) element or otherwise document element
+```javascript
 profero.util = profero.util || {
 	
 	getElementsByClass: function(id, tag, className) {
@@ -30,7 +30,7 @@ profero.util = profero.util || {
 };
 ```
 
-Define a constructor to wrap instance methods simply
+#### Define a constructor to wrap instance methods simply
 ```javascript
 var Profile = function() {
 	this.skills = [];
@@ -39,7 +39,7 @@ var Profile = function() {
 ```
 
 ## Instance methods
-Initialize method, harness chainable of methods, since all of which return object instance itself
+#### Initialize method, harness chainable of methods, since all of which return object instance itself
 ```javascript
 	init: function() {
 		this.removeProfile()
@@ -50,9 +50,9 @@ Initialize method, harness chainable of methods, since all of which return objec
 	},
 ```
 
-Most of methods take on simple and similar logic, one trap to notice when iterating bind events to DOMs is avoid closure issue
+### Most of methods take on simple and similar logic, one trap to notice when iterating bind events to DOMs is avoid closure issue
 
-Remove an item method, using another anonymous to workround this issue
+#### Remove an item method, using another anonymous to workround this issue
 ```javascript
 removeProfile: function() {
 		var buttons = profero.util.getElementsByClass('myTabContent', 'button', 'deleteProfile');
@@ -80,7 +80,7 @@ removeProfile: function() {
 	},
 ```
 
-Start up all functions
+## Start up all functions
 ```javascript
 new Profile().init();
 ```
