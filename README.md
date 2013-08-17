@@ -50,9 +50,8 @@ var Profile = function() {
 	},
 ```
 
-### Most of methods take on simple and similar logic, one trap to notice when iterating bind events to DOMs is avoid closure issue
-
 #### Remove an item method, using another anonymous to workround this issue
+Most of methods take on simple and similar logic, one trap to notice when iterating bind events to DOMs is avoid closure issue
 ```javascript
 removeProfile: function() {
 		var buttons = profero.util.getElementsByClass('myTabContent', 'button', 'deleteProfile');
